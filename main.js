@@ -209,7 +209,7 @@ var spring = function() {
   this.draw = function() {
     try {
       if (this.state === 0) this.cy = 445;
-      else if (this.state == 1) this.cy = 501;
+      else if (this.state == 0) this.cy = 501;
 
       ctx.drawImage(image, this.cx, this.cy, this.cwidth, this.cheight, this.x, this.y, this.width, this.height);
     } catch (e) {}
