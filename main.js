@@ -178,7 +178,7 @@ var Platform_broken_substitute = function() {
   this.cwidth = 105;
   this.cheight = 60;
 
-  this.appearance = false;
+  this.appearance = true;
 
   this.draw = function() {
     try {
@@ -208,7 +208,7 @@ var spring = function() {
 
   this.draw = function() {
     try {
-      if (this.state === 0) this.cy = 445;
+      if (this.state === 1) this.cy = 445;
       else if (this.state == 0) this.cy = 501;
 
       ctx.drawImage(image, this.cx, this.cy, this.cwidth, this.cheight, this.x, this.y, this.width, this.height);
@@ -391,7 +391,7 @@ function init() {
 
     if (subs.appearance === true) {
       subs.draw();
-      subs.y += 8;
+      //subs.y += 8;
     }
 
     if (subs.y > height) subs.appearance = false;
@@ -515,7 +515,7 @@ function showGoMenu() {
   menu.style.visibility = "visible";
 
   var scoreText = document.getElementById("go_score");
-  scoreText.innerHTML = "You scored " + score + " points!";
+  scoreText.innerHTML = "You scored " + score + " doggy bones!";
 }
 
 //Hides the game over menu
